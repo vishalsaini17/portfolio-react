@@ -4,7 +4,7 @@ import { Box, Container, Grid, Link } from "@material-ui/core";
 type props = {};
 
 const MainNavbar: React.FC<props> = () => {
-  const handleClick = (event: any, selector: string) => {
+  const scrollToSection = (event: any, selector: string) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
       selector
     );
@@ -17,20 +17,20 @@ const MainNavbar: React.FC<props> = () => {
       <Container>
         <Grid container spacing={3}>
           <Grid item>
-            <Link onClick={(e) => handleClick(e, "#hello")}>Hello</Link>
+            <Link onClick={(e) => scrollToSection(e, "#hello")}>Hello</Link>
           </Grid>
           <Grid item>
-            <Link onClick={(e) => handleClick(e, "#resume")}>Resume</Link>
+            <Link onClick={(e) => scrollToSection(e, "#resume")}>Resume</Link>
             {/* sub list => education, employment, skills */}
           </Grid>
           <Grid item>
-            <Link onClick={(e) => handleClick(e, "#projects")}>Projects</Link>
+            <Link onClick={(e) => scrollToSection(e, "#projects")}>Projects</Link>
           </Grid>
           <Grid item>
-            <Link onClick={(e) => handleClick(e, "#testimonials")}>testimonials</Link>
+            <Link onClick={(e) => scrollToSection(e, "#testimonials")}>testimonials</Link>
           </Grid>
           <Grid item>
-            <Link onClick={(e) => handleClick(e, "#contact")}>Contact</Link>
+            <Link onClick={(e) => scrollToSection(e, "#contact")}>Contact</Link>
           </Grid>
         </Grid>
       </Container>
